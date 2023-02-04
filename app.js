@@ -12,7 +12,7 @@ app.use(bodyParser.json())
 
 sequelize.initDb();
 
-app.get('/' ,(res,quet)=>{
+app.get('/' ,(req,res)=>{
     res.json('Hello, World !🖐️')
 })
 
