@@ -13,7 +13,7 @@ app.use(bodyParser.json())
 sequelize.initDb();
 
 app.get('/' ,(res,quet)=>{
-    res.json('Hello, Heroku !🖐️')
+    res.json('Hello, World !🖐️')
 })
 
 /*on placera ici nos futurs points de terminaisons */
