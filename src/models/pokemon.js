@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
         unique:{
           msg:"ce nom est deja pris"
         },
-        validate:{ 
+        validate:{
           notEmpty:{msg:"le nom du pokemon est obligatoire."},
           notNull:{msg:"Le nom est une propriétée requise."}
         }
