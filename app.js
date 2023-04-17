@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const sequelize = require('./src/db/sequelize')
 
-const favicon = require('serve-favicon')
+const favicon = require('serve-favicon') 
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -12,7 +12,7 @@ app.use(bodyParser.json())
 
 sequelize.initDb();
 
-app.get('/' ,(req,res)=>{
+app.get('/', (req, res) => {
     res.json('Hello, World !🖐️')
 })
 
@@ -25,10 +25,8 @@ require("./src/routes/deletePokemon")(app)
 require('./src/routes/login')(app)
 
 //gestion de l'erreure 404
-
-app.use(({res}) =>{
+app.use(({ res }) => {
     const message = "Impossible de trouver la ressource demander! vous pouver essayer une autre URL"
-    res.status(404).json({message})
+    res.status(404).json({ message })
 })
-
-app.listen(port, ()=> console.log(`Notre application Node est demarée sur : http://localhost:${port}`))
+app.listen(port, () => console.log(`Notre application Node est demarée sur : http://localhost:${port}`))
